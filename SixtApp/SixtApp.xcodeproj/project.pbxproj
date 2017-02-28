@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E4E7C7E603835C864223D63 /* Pods_SixtApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8759AA2A6C27EF6A900FFA05 /* Pods_SixtApp.framework */; };
+		D05C8A191E65599A0028EFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A181E65599A0028EFB5 /* AppDelegate.swift */; };
+		D05C8A1B1E65599A0028EFB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A1A1E65599A0028EFB5 /* ViewController.swift */; };
+		D05C8A1E1E65599A0028EFB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05C8A1C1E65599A0028EFB5 /* Main.storyboard */; };
+		D05C8A201E65599A0028EFB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05C8A1F1E65599A0028EFB5 /* Assets.xcassets */; };
+		D05C8A231E65599A0028EFB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05C8A211E65599A0028EFB5 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		58435E60D22A813CCE10E26C /* Pods-SixtApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixtApp/Pods-SixtApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8759AA2A6C27EF6A900FFA05 /* Pods_SixtApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixtApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5762E4898B7BB6C390368D /* Pods-SixtApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixtApp/Pods-SixtApp.release.xcconfig"; sourceTree = "<group>"; };
+		D05C8A151E65599A0028EFB5 /* SixtApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixtApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05C8A181E65599A0028EFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D05C8A1A1E65599A0028EFB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D05C8A1D1E65599A0028EFB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D05C8A1F1E65599A0028EFB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D05C8A221E65599A0028EFB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D05C8A241E65599A0028EFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D05C8A121E65599A0028EFB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E4E7C7E603835C864223D63 /* Pods_SixtApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66B2B664C1661E33820C7ABB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8759AA2A6C27EF6A900FFA05 /* Pods_SixtApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69F6CCA9E34B5CF0D6609882 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58435E60D22A813CCE10E26C /* Pods-SixtApp.debug.xcconfig */,
+				CC5762E4898B7BB6C390368D /* Pods-SixtApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D05C8A0C1E6559990028EFB5 = {
+			isa = PBXGroup;
+			children = (
+				D05C8A171E65599A0028EFB5 /* SixtApp */,
+				D05C8A161E65599A0028EFB5 /* Products */,
+				69F6CCA9E34B5CF0D6609882 /* Pods */,
+				66B2B664C1661E33820C7ABB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D05C8A161E65599A0028EFB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A151E65599A0028EFB5 /* SixtApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D05C8A171E65599A0028EFB5 /* SixtApp */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A181E65599A0028EFB5 /* AppDelegate.swift */,
+				D05C8A1A1E65599A0028EFB5 /* ViewController.swift */,
+				D05C8A1C1E65599A0028EFB5 /* Main.storyboard */,
+				D05C8A1F1E65599A0028EFB5 /* Assets.xcassets */,
+				D05C8A211E65599A0028EFB5 /* LaunchScreen.storyboard */,
+				D05C8A241E65599A0028EFB5 /* Info.plist */,
+			);
+			path = SixtApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D05C8A141E65599A0028EFB5 /* SixtApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D05C8A271E65599A0028EFB5 /* Build configuration list for PBXNativeTarget "SixtApp" */;
+			buildPhases = (
+				EF831A355DB5D65777EE591C /* [CP] Check Pods Manifest.lock */,
+				D05C8A111E65599A0028EFB5 /* Sources */,
+				D05C8A121E65599A0028EFB5 /* Frameworks */,
+				D05C8A131E65599A0028EFB5 /* Resources */,
+				3DCE3FF9868CDAD9CAA2A8D2 /* [CP] Embed Pods Frameworks */,
+				A28A5008DFBD451171BDCBBB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SixtApp;
+			productName = SixtApp;
+			productReference = D05C8A151E65599A0028EFB5 /* SixtApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D05C8A0D1E6559990028EFB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Shabir Jan";
+				TargetAttributes = {
+					D05C8A141E65599A0028EFB5 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = L67DULCYGJ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D05C8A101E6559990028EFB5 /* Build configuration list for PBXProject "SixtApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D05C8A0C1E6559990028EFB5;
+			productRefGroup = D05C8A161E65599A0028EFB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D05C8A141E65599A0028EFB5 /* SixtApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D05C8A131E65599A0028EFB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05C8A231E65599A0028EFB5 /* LaunchScreen.storyboard in Resources */,
+				D05C8A201E65599A0028EFB5 /* Assets.xcassets in Resources */,
+				D05C8A1E1E65599A0028EFB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DCE3FF9868CDAD9CAA2A8D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixtApp/Pods-SixtApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A28A5008DFBD451171BDCBBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixtApp/Pods-SixtApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF831A355DB5D65777EE591C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D05C8A111E65599A0028EFB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05C8A1B1E65599A0028EFB5 /* ViewController.swift in Sources */,
+				D05C8A191E65599A0028EFB5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D05C8A1C1E65599A0028EFB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05C8A1D1E65599A0028EFB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D05C8A211E65599A0028EFB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05C8A221E65599A0028EFB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D05C8A251E65599A0028EFB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D05C8A261E65599A0028EFB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D05C8A281E65599A0028EFB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58435E60D22A813CCE10E26C /* Pods-SixtApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L67DULCYGJ;
+				INFOPLIST_FILE = SixtApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shabir.SixtApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D05C8A291E65599A0028EFB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC5762E4898B7BB6C390368D /* Pods-SixtApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L67DULCYGJ;
+				INFOPLIST_FILE = SixtApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shabir.SixtApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D05C8A101E6559990028EFB5 /* Build configuration list for PBXProject "SixtApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05C8A251E65599A0028EFB5 /* Debug */,
+				D05C8A261E65599A0028EFB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D05C8A271E65599A0028EFB5 /* Build configuration list for PBXNativeTarget "SixtApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05C8A281E65599A0028EFB5 /* Debug */,
+				D05C8A291E65599A0028EFB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D05C8A0D1E6559990028EFB5 /* Project object */;
+}
