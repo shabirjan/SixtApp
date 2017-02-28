@@ -13,6 +13,10 @@
 		D05C8A1E1E65599A0028EFB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05C8A1C1E65599A0028EFB5 /* Main.storyboard */; };
 		D05C8A201E65599A0028EFB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05C8A1F1E65599A0028EFB5 /* Assets.xcassets */; };
 		D05C8A231E65599A0028EFB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05C8A211E65599A0028EFB5 /* LaunchScreen.storyboard */; };
+		D05C8A2C1E656D110028EFB5 /* SixtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A2B1E656D110028EFB5 /* SixtService.swift */; };
+		D05C8A2F1E656D6A0028EFB5 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A2E1E656D6A0028EFB5 /* Car.swift */; };
+		D05C8A321E6582CA0028EFB5 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A311E6582CA0028EFB5 /* CarManager.swift */; };
+		D05C8A351E65A9770028EFB5 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A341E65A9770028EFB5 /* FileHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		D05C8A1F1E65599A0028EFB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D05C8A221E65599A0028EFB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D05C8A241E65599A0028EFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05C8A2B1E656D110028EFB5 /* SixtService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SixtService.swift; path = Network/SixtService.swift; sourceTree = "<group>"; };
+		D05C8A2E1E656D6A0028EFB5 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = Model/Car.swift; sourceTree = "<group>"; };
+		D05C8A311E6582CA0028EFB5 /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarManager.swift; path = Manager/CarManager.swift; sourceTree = "<group>"; };
+		D05C8A341E65A9770028EFB5 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHelper.swift; path = Helper/FileHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,10 @@
 		D05C8A171E65599A0028EFB5 /* SixtApp */ = {
 			isa = PBXGroup;
 			children = (
+				D05C8A331E65A9660028EFB5 /* Helper */,
+				D05C8A301E657D490028EFB5 /* Manager */,
+				D05C8A2D1E656D530028EFB5 /* Model */,
+				D05C8A2A1E656CE10028EFB5 /* Network */,
 				D05C8A181E65599A0028EFB5 /* AppDelegate.swift */,
 				D05C8A1A1E65599A0028EFB5 /* ViewController.swift */,
 				D05C8A1C1E65599A0028EFB5 /* Main.storyboard */,
@@ -86,6 +98,38 @@
 				D05C8A241E65599A0028EFB5 /* Info.plist */,
 			);
 			path = SixtApp;
+			sourceTree = "<group>";
+		};
+		D05C8A2A1E656CE10028EFB5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A2B1E656D110028EFB5 /* SixtService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		D05C8A2D1E656D530028EFB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A2E1E656D6A0028EFB5 /* Car.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D05C8A301E657D490028EFB5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A311E6582CA0028EFB5 /* CarManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		D05C8A331E65A9660028EFB5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A341E65A9770028EFB5 /* FileHelper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05C8A1B1E65599A0028EFB5 /* ViewController.swift in Sources */,
+				D05C8A2C1E656D110028EFB5 /* SixtService.swift in Sources */,
+				D05C8A321E6582CA0028EFB5 /* CarManager.swift in Sources */,
+				D05C8A2F1E656D6A0028EFB5 /* Car.swift in Sources */,
 				D05C8A191E65599A0028EFB5 /* AppDelegate.swift in Sources */,
+				D05C8A351E65A9770028EFB5 /* FileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L67DULCYGJ;
 				INFOPLIST_FILE = SixtApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shabir.SixtApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,6 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L67DULCYGJ;
 				INFOPLIST_FILE = SixtApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shabir.SixtApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -377,6 +427,7 @@
 				D05C8A291E65599A0028EFB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
