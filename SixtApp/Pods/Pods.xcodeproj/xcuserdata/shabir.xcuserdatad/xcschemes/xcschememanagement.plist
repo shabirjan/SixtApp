@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Moya-ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,7 +39,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>109B02C756F9F046C45C16A7659F8109</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2A6D0851BA24DD25864CB23A3A83B9CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>371A2ADAEA6704843690C4930E99E9F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,6 +82,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5AEA6DFFBA56B2DAEC6EDDE9EF8D2F79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
@@ -67,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E918FA92F3E4367B0AFB0A6A63435311</key>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

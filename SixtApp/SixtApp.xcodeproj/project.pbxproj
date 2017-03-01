@@ -17,6 +17,10 @@
 		D05C8A2F1E656D6A0028EFB5 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A2E1E656D6A0028EFB5 /* Car.swift */; };
 		D05C8A321E6582CA0028EFB5 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A311E6582CA0028EFB5 /* CarManager.swift */; };
 		D05C8A351E65A9770028EFB5 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A341E65A9770028EFB5 /* FileHelper.swift */; };
+		D05C8A431E66F1040028EFB5 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A421E66F1040028EFB5 /* CarViewModel.swift */; };
+		D05C8A451E66F3530028EFB5 /* SixtAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A441E66F3530028EFB5 /* SixtAPIManager.swift */; };
+		D05C8A481E671E090028EFB5 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A471E671E090028EFB5 /* CarCell.swift */; };
+		D05C8A4C1E671F250028EFB5 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A4B1E671F250028EFB5 /* UIImageView+Kingfisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		D05C8A2E1E656D6A0028EFB5 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = Model/Car.swift; sourceTree = "<group>"; };
 		D05C8A311E6582CA0028EFB5 /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarManager.swift; path = Manager/CarManager.swift; sourceTree = "<group>"; };
 		D05C8A341E65A9770028EFB5 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHelper.swift; path = Helper/FileHelper.swift; sourceTree = "<group>"; };
+		D05C8A421E66F1040028EFB5 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewModel.swift; path = ViewModel/CarViewModel.swift; sourceTree = "<group>"; };
+		D05C8A441E66F3530028EFB5 /* SixtAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixtAPIManager.swift; sourceTree = "<group>"; };
+		D05C8A471E671E090028EFB5 /* CarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarCell.swift; path = "Custom Cell/CarCell.swift"; sourceTree = "<group>"; };
+		D05C8A4B1E671F250028EFB5 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Kingfisher.swift"; path = "Helper/UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,8 @@
 		D05C8A171E65599A0028EFB5 /* SixtApp */ = {
 			isa = PBXGroup;
 			children = (
+				D05C8A461E671DEA0028EFB5 /* Custom Cell */,
+				D05C8A411E66F0EE0028EFB5 /* ViewModel */,
 				D05C8A331E65A9660028EFB5 /* Helper */,
 				D05C8A301E657D490028EFB5 /* Manager */,
 				D05C8A2D1E656D530028EFB5 /* Model */,
@@ -104,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				D05C8A2B1E656D110028EFB5 /* SixtService.swift */,
+				D05C8A441E66F3530028EFB5 /* SixtAPIManager.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -127,9 +138,26 @@
 		D05C8A331E65A9660028EFB5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D05C8A4B1E671F250028EFB5 /* UIImageView+Kingfisher.swift */,
 				D05C8A341E65A9770028EFB5 /* FileHelper.swift */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		D05C8A411E66F0EE0028EFB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A421E66F1040028EFB5 /* CarViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		D05C8A461E671DEA0028EFB5 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A471E671E090028EFB5 /* CarCell.swift */,
+			);
+			name = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,9 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05C8A1B1E65599A0028EFB5 /* ViewController.swift in Sources */,
+				D05C8A431E66F1040028EFB5 /* CarViewModel.swift in Sources */,
 				D05C8A2C1E656D110028EFB5 /* SixtService.swift in Sources */,
+				D05C8A481E671E090028EFB5 /* CarCell.swift in Sources */,
 				D05C8A321E6582CA0028EFB5 /* CarManager.swift in Sources */,
+				D05C8A451E66F3530028EFB5 /* SixtAPIManager.swift in Sources */,
 				D05C8A2F1E656D6A0028EFB5 /* Car.swift in Sources */,
+				D05C8A4C1E671F250028EFB5 /* UIImageView+Kingfisher.swift in Sources */,
 				D05C8A191E65599A0028EFB5 /* AppDelegate.swift in Sources */,
 				D05C8A351E65A9770028EFB5 /* FileHelper.swift in Sources */,
 			);

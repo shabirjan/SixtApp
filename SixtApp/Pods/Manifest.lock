@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - Kingfisher (3.5.0)
   - Moya (8.0.2):
     - Moya/Core (= 8.0.2)
   - Moya-ObjectMapper/Core (2.3.1):
@@ -17,20 +18,29 @@ PODS:
     - RxSwift (~> 3.0)
   - ObjectMapper (2.2.3)
   - Result (3.1.0)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
+  - Kingfisher
   - Moya
   - Moya-ObjectMapper/RxSwift
+  - RxCocoa
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   Moya-ObjectMapper: 952be2b261d38cf8d973b7e429708eb03d256e23
   ObjectMapper: d3b3de11267f5d971f390eb8d63dd509116a4329
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 3f50197fa7f5b3046a04fcff99d61f111ec6d179
+PODFILE CHECKSUM: e0517bc660275b011e1a5d872ce9128bce24d98c
 
 COCOAPODS: 1.2.0

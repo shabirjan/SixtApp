@@ -8,5 +8,8 @@ target 'SixtApp' do
   # Pods for SixtApp
   pod 'Moya'
   pod 'Moya-ObjectMapper/RxSwift'
+  pod 'Kingfisher'
+  pod 'RxCocoa'
+  pod 'SVProgressHUD'
 
 end
