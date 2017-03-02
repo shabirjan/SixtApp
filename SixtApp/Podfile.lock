@@ -21,6 +21,9 @@ PODS:
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
+  - SDWebImage/Core (4.0.0)
+  - SDWebImage/MapKit (4.0.0):
+    - SDWebImage/Core
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - Moya
   - Moya-ObjectMapper/RxSwift
   - RxCocoa
+  - SDWebImage/MapKit
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -39,8 +43,9 @@ SPEC CHECKSUMS:
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: e0517bc660275b011e1a5d872ce9128bce24d98c
+PODFILE CHECKSUM: 115780dab256d26fc93e026ca9187b834ae72b50
 
 COCOAPODS: 1.2.0

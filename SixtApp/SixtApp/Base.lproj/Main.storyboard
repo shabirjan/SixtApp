@@ -12,7 +12,7 @@
         <!--Sixt Cars-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="SixtApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="CarViewController" customModule="SixtApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6GB-01-Db5" id="hTm-u8-TkC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9L-1x-cZD">
@@ -81,17 +81,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Oa-6Q-wgN">
+                                <rect key="frame" x="119" y="89" width="176" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="SAp-m3-X1o"/>
+                                    <constraint firstAttribute="width" constant="176" id="wNZ-PQ-ty0"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="List"/>
+                                    <segment title="Map"/>
+                                </segments>
+                            </segmentedControl>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4BT-rS-KSu">
+                                <rect key="frame" x="0.0" y="140" width="414" height="596"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="NJ8-s5-JPC" firstAttribute="top" secondItem="6Oa-6Q-wgN" secondAttribute="bottom" constant="23" id="BSj-vw-LJP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4BT-rS-KSu" secondAttribute="bottom" id="GD2-du-m84"/>
+                            <constraint firstItem="6Oa-6Q-wgN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="JX4-pz-94D"/>
+                            <constraint firstItem="6Oa-6Q-wgN" firstAttribute="centerX" secondItem="NJ8-s5-JPC" secondAttribute="centerX" id="MR3-BK-HcP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NJ8-s5-JPC" secondAttribute="bottom" id="NDO-qM-MvZ"/>
                             <constraint firstItem="NJ8-s5-JPC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qwr-Db-EKB"/>
                             <constraint firstItem="NJ8-s5-JPC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="Vzz-gk-Pvm"/>
+                            <constraint firstItem="4BT-rS-KSu" firstAttribute="top" secondItem="6Oa-6Q-wgN" secondAttribute="bottom" constant="23" id="clq-mK-3Fw"/>
+                            <constraint firstAttribute="trailing" secondItem="4BT-rS-KSu" secondAttribute="trailing" id="dKY-nY-bIu"/>
+                            <constraint firstItem="4BT-rS-KSu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dME-Dk-1iP"/>
                             <constraint firstAttribute="trailing" secondItem="NJ8-s5-JPC" secondAttribute="trailing" id="ekg-xL-2lq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sixt Cars" id="zes-L5-fpZ"/>
                     <connections>
+                        <outlet property="carMap" destination="4BT-rS-KSu" id="CeX-Ve-guW"/>
+                        <outlet property="displayModeSegment" destination="6Oa-6Q-wgN" id="oKb-qJ-RbV"/>
                         <outlet property="tableView" destination="NJ8-s5-JPC" id="hGl-8M-wpr"/>
                     </connections>
                 </viewController>

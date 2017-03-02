@@ -134,7 +134,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SixtApp/ViewModel/CarViewModel.swift"
@@ -147,14 +147,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SixtApp.CarViewModel.loadAllCars () -&gt; ()"
                   moduleName = "SixtApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shabir/Desktop/My%20Work/Interview%20Tasks/SixtApp/SixtApp/SixtApp/ViewModel/CarViewModel.swift"
-                  timestampString = "510131513.543594"
+                  timestampString = "510170952.387595"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -162,14 +162,14 @@
                   offsetFromSymbolStart = "37">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SixtApp.CarViewModel.(loadAllCars () -&gt; ()).(closure #1)"
                   moduleName = "SixtApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shabir/Desktop/My%20Work/Interview%20Tasks/SixtApp/SixtApp/SixtApp/ViewModel/CarViewModel.swift"
-                  timestampString = "510131513.544797"
+                  timestampString = "510170952.389212"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -182,7 +182,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SixtApp/Manager/CarManager.swift"
@@ -198,7 +198,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SixtApp/Manager/CarManager.swift"
@@ -214,7 +214,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SixtApp/Manager/CarManager.swift"
@@ -230,7 +230,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SixtApp/ViewModel/CarViewModel.swift"
@@ -256,6 +256,22 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "setupBindings()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SixtApp/Manager/CarManager.swift"
+            timestampString = "510170960.311908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "fetchAllCars(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

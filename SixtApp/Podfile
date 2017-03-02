@@ -11,5 +11,5 @@ target 'SixtApp' do
   pod 'Kingfisher'
   pod 'RxCocoa'
   pod 'SVProgressHUD'
-
+pod 'SDWebImage/MapKit'
 end

@@ -15,7 +15,7 @@ extension UIImageView{
             return
         }
         self.kf.indicatorType = .activity
-        let image = UIImage(named: "placeholder")
+        let image = UIImage(named: "car-placeholder")
         self.kf.setImage(with: ImageResource(downloadURL: imageURL), placeholder: image)
     }
 }
