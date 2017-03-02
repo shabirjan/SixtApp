@@ -12,11 +12,12 @@ import RxSwift
 class CarViewModel: NSObject {
     let carManager = CarManager()
     let allCars: Variable<[Car]> = Variable([])
-    var errorString = ""
+    var errorString  = Variable<String?>("")
     func loadAllCars(){
         carManager.fetchAllCars { [weak self](cars, error) in
             guard error == nil else{
-                self?.errorString = error!
+//                self?.errorString = error!
+                self?.errorString.value = error!
                 return
             }
             self?.allCars.value = cars!

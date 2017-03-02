@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E4E7C7E603835C864223D63 /* Pods_SixtApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8759AA2A6C27EF6A900FFA05 /* Pods_SixtApp.framework */; };
+		D02904D21E67FD13009322DF /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02904D01E67FD13009322DF /* UIImageView+Kingfisher.swift */; };
+		D02904D31E67FD13009322DF /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02904D11E67FD13009322DF /* UIViewController+Alert.swift */; };
 		D05C8A191E65599A0028EFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A181E65599A0028EFB5 /* AppDelegate.swift */; };
 		D05C8A1B1E65599A0028EFB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A1A1E65599A0028EFB5 /* ViewController.swift */; };
 		D05C8A1E1E65599A0028EFB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05C8A1C1E65599A0028EFB5 /* Main.storyboard */; };
@@ -20,13 +22,14 @@
 		D05C8A431E66F1040028EFB5 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A421E66F1040028EFB5 /* CarViewModel.swift */; };
 		D05C8A451E66F3530028EFB5 /* SixtAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A441E66F3530028EFB5 /* SixtAPIManager.swift */; };
 		D05C8A481E671E090028EFB5 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A471E671E090028EFB5 /* CarCell.swift */; };
-		D05C8A4C1E671F250028EFB5 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A4B1E671F250028EFB5 /* UIImageView+Kingfisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58435E60D22A813CCE10E26C /* Pods-SixtApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixtApp/Pods-SixtApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8759AA2A6C27EF6A900FFA05 /* Pods_SixtApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixtApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5762E4898B7BB6C390368D /* Pods-SixtApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixtApp/Pods-SixtApp.release.xcconfig"; sourceTree = "<group>"; };
+		D02904D01E67FD13009322DF /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Kingfisher.swift"; path = "Extensions/UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		D02904D11E67FD13009322DF /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Alert.swift"; path = "Extensions/UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		D05C8A151E65599A0028EFB5 /* SixtApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixtApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05C8A181E65599A0028EFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D05C8A1A1E65599A0028EFB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		D05C8A421E66F1040028EFB5 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewModel.swift; path = ViewModel/CarViewModel.swift; sourceTree = "<group>"; };
 		D05C8A441E66F3530028EFB5 /* SixtAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixtAPIManager.swift; sourceTree = "<group>"; };
 		D05C8A471E671E090028EFB5 /* CarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarCell.swift; path = "Custom Cell/CarCell.swift"; sourceTree = "<group>"; };
-		D05C8A4B1E671F250028EFB5 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Kingfisher.swift"; path = "Helper/UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D02904CF1E67FCEE009322DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D02904D01E67FD13009322DF /* UIImageView+Kingfisher.swift */,
+				D02904D11E67FD13009322DF /* UIViewController+Alert.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		D05C8A0C1E6559990028EFB5 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +105,7 @@
 		D05C8A171E65599A0028EFB5 /* SixtApp */ = {
 			isa = PBXGroup;
 			children = (
+				D02904CF1E67FCEE009322DF /* Extensions */,
 				D05C8A461E671DEA0028EFB5 /* Custom Cell */,
 				D05C8A411E66F0EE0028EFB5 /* ViewModel */,
 				D05C8A331E65A9660028EFB5 /* Helper */,
@@ -138,7 +150,6 @@
 		D05C8A331E65A9660028EFB5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				D05C8A4B1E671F250028EFB5 /* UIImageView+Kingfisher.swift */,
 				D05C8A341E65A9770028EFB5 /* FileHelper.swift */,
 			);
 			name = Helper;
@@ -284,14 +295,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02904D21E67FD13009322DF /* UIImageView+Kingfisher.swift in Sources */,
 				D05C8A1B1E65599A0028EFB5 /* ViewController.swift in Sources */,
 				D05C8A431E66F1040028EFB5 /* CarViewModel.swift in Sources */,
+				D02904D31E67FD13009322DF /* UIViewController+Alert.swift in Sources */,
 				D05C8A2C1E656D110028EFB5 /* SixtService.swift in Sources */,
 				D05C8A481E671E090028EFB5 /* CarCell.swift in Sources */,
 				D05C8A321E6582CA0028EFB5 /* CarManager.swift in Sources */,
 				D05C8A451E66F3530028EFB5 /* SixtAPIManager.swift in Sources */,
 				D05C8A2F1E656D6A0028EFB5 /* Car.swift in Sources */,
-				D05C8A4C1E671F250028EFB5 /* UIImageView+Kingfisher.swift in Sources */,
 				D05C8A191E65599A0028EFB5 /* AppDelegate.swift in Sources */,
 				D05C8A351E65A9770028EFB5 /* FileHelper.swift in Sources */,
 			);

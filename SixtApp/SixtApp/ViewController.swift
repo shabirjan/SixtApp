@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         setupBindings()
         SVProgressHUD.show(withStatus: "Loading Cars")
         carViewModel.loadAllCars()
@@ -28,18 +28,24 @@ class ViewController: UIViewController {
                 SVProgressHUD.dismiss()
                 self?.setupCellConfiguration()
             }).addDisposableTo(disposeBag)
+        
+        carViewModel.errorString.asObservable().skip(1)
+            .subscribe(onNext: { [weak self] error in
+                SVProgressHUD.dismiss()
+                self?.showAlertWithMessage(error)
+            }).addDisposableTo(disposeBag)
     }
-
+    
     func setupCellConfiguration(){
         let allCars = Observable.just(carViewModel.allCars.value)
         allCars
-        .bindTo(tableView
-        .rx
-            .items(cellIdentifier: CarCell.Identifier, cellType: CarCell.self)){
-                _,car,cell in
-                cell.configureWithCar(car: car)
-        }
-        .addDisposableTo(disposeBag)
+            .bindTo(tableView
+                .rx
+                .items(cellIdentifier: CarCell.Identifier, cellType: CarCell.self)){
+                    _,car,cell in
+                    cell.configureWithCar(car: car)
+            }
+            .addDisposableTo(disposeBag)
         
     }
 }
