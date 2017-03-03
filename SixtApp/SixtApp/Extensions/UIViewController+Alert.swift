@@ -1,6 +1,6 @@
 //
 //  UIViewController+Alert.swift
-//  DaleniApp
+//  SixtApp
 //
 //  Created by Shabir Jan on 26/02/2017.
 //  Copyright © 2017 Shabir Jan. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  UIImageView+Kingfisher.swift
-//  DaleniApp
+//  SixtApp  
 //
 //  Created by Shabir Jan on 24/02/2017.
 //  Copyright © 2017 Shabir Jan. All rights reserved.
@@ -13,7 +13,7 @@ extension UIImageView{
         guard let imageURL = URL(string:url) else {
             return
         }
-        let placeholderImage = UIImage(named: "car-placeholder")
-        self.sd_setImage(with: imageURL, placeholderImage: placeholderImage)
+        self.sd_setShowActivityIndicatorView(true)
+        self.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "car-placeholder"))
     }
 }
