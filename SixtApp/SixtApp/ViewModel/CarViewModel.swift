@@ -16,7 +16,6 @@ class CarViewModel: NSObject {
     func loadAllCars(){
         carManager.fetchAllCars { [weak self](cars, error) in
             guard error == nil else{
-//                self?.errorString = error!
                 self?.errorString.value = error!
                 return
             }

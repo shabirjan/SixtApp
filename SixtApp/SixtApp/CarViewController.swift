@@ -29,6 +29,8 @@ class CarViewController: UIViewController {
     
    
     func setupBindings(){
+        
+        //Using ViewModel AllCars as Observable so whenever new items are added in that array this Observable will be called to setup Map and TableView to show the data
         carViewModel.allCars.asObservable().skip(1)
             .subscribe(onNext: {[weak self] _ in
                 SVProgressHUD.dismiss()
@@ -36,12 +38,15 @@ class CarViewController: UIViewController {
                 self?.setupMap()
             }).addDisposableTo(disposeBag)
         
+        //Using ViewModel Error String as Observable so whenever there is change in errostring this Observable will be called to show the error message to user
         carViewModel.errorString.asObservable().skip(1)
             .subscribe(onNext: { [weak self] error in
                 SVProgressHUD.dismiss()
                 self?.showAlertWithMessage(error)
             }).addDisposableTo(disposeBag)
         
+        
+        //Observable for UISegment Control to observe change in the selection of Segments and show appropriate view to user based on selection
        displayModeSegment.rx
         .selectedSegmentIndex
         .asObservable()
@@ -50,6 +55,8 @@ class CarViewController: UIViewController {
         }).addDisposableTo(disposeBag)
         
     }
+    
+    //Method to setup custom annotations on the map to show cars.
     func setupMap(){
         let annotations = carViewModel.allCars.value.map{ car -> CarAnnotation in
             let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.make + "•" + car.modelName, subtitle: "Transmission : \( car.transmission.lowercased() == "m" ? "Manual" : "Automatic")", url: car.carImageUrl)
@@ -59,6 +66,8 @@ class CarViewController: UIViewController {
         carMap.addAnnotations(annotations)
         carMap.showAnnotations(annotations, animated: true)
     }
+    
+    //Method to setup Tableview using RxCocoa way
     func setupCellConfiguration(){
         let allCars = Observable.just(carViewModel.allCars.value)
         allCars
