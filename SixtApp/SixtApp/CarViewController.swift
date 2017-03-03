@@ -96,7 +96,17 @@ extension CarViewController : MKMapViewDelegate{
             anView?.annotation = annotation
         }
         let carAnnotation = annotation as? CarAnnotation
-        anView?.sd_setImage(with: URL(string:(carAnnotation?.imageURL)!), placeholderImage: UIImage(named:"car-placeholder"))
+
+        let imageview  = UIImageView()
+        imageview.download(image: (carAnnotation?.imageURL)!)
+        
+        var rect = imageview.frame
+        rect.size.width = 100
+        rect.size.height = 60
+        imageview.frame = rect
+        anView?.addSubview(imageview)
+        anView?.frame = rect
+        
         return anView
         
     }

@@ -21,7 +21,7 @@ class CarCell: UITableViewCell {
         lblCarName.text = car.make + "•" + car.modelName
         lblTransmission.text = "Transmission : \( car.transmission.lowercased() == "m" ? "Manual" : "Automatic")"
         lblCleaniness.text   = "Cleanliness  : \(car.innerCleanliness)"
-        carImg.download(image: "https://prod.drive-now-content.com/fileadmin/user_upload_global/assets/cars/\(car.modelIdentifier)/\(car.color)/2x/car.png")
+        carImg.download(image: car.carImageUrl)
     }
     
 

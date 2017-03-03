@@ -46,7 +46,7 @@ class Car : Mappable{
         latitude   <- map["latitude"]
         longitude   <- map["longitude"]
         innerCleanliness  <- map["innerCleanliness"]
-        carImageUrl <- map["carImageUrl"]
+        carImageUrl = "https://prod.drive-now-content.com/fileadmin/user_upload_global/assets/cars/\(modelIdentifier)/\(color)/2x/car.png"
         
         
     }
