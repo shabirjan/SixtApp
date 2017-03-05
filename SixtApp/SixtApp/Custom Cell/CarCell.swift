@@ -19,7 +19,7 @@ class CarCell: UITableViewCell {
     
     func configureWithCar(car: Car) {
         lblCarName.text = car.make + "•" + car.modelName
-        lblTransmission.text = "Transmission : \( car.transmission.lowercased() == "m" ? "Manual" : "Automatic")"
+        lblTransmission.text = "Transmission : \( car.transmission.lowercased() == "m" ? CarTransmissionType.manual : CarTransmissionType.automatic)"
         lblCleaniness.text   = "Cleanliness  : \(car.innerCleanliness)"
         carImg.download(image: car.carImageUrl)
     }

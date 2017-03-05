@@ -115,6 +115,9 @@
 		D05C8A171E65599A0028EFB5 /* SixtApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED1AD31E6C996900AB5270 /* View */,
+				D0ED1AD21E6C996100AB5270 /* App Delegate */,
+				D0ED1AD11E6C995800AB5270 /* ViewControllers */,
 				D01B6CDA1E6864BC003E906B /* Custom Annotation */,
 				D02904CF1E67FCEE009322DF /* Extensions */,
 				D05C8A461E671DEA0028EFB5 /* Custom Cell */,
@@ -123,12 +126,8 @@
 				D05C8A301E657D490028EFB5 /* Manager */,
 				D05C8A2D1E656D530028EFB5 /* Model */,
 				D05C8A2A1E656CE10028EFB5 /* Network */,
-				D05C8A181E65599A0028EFB5 /* AppDelegate.swift */,
-				D05C8A1A1E65599A0028EFB5 /* CarViewController.swift */,
-				D05C8A1C1E65599A0028EFB5 /* Main.storyboard */,
+				D0ED1AD41E6C998000AB5270 /* Support */,
 				D05C8A1F1E65599A0028EFB5 /* Assets.xcassets */,
-				D05C8A211E65599A0028EFB5 /* LaunchScreen.storyboard */,
-				D05C8A241E65599A0028EFB5 /* Info.plist */,
 			);
 			path = SixtApp;
 			sourceTree = "<group>";
@@ -180,6 +179,39 @@
 				D05C8A471E671E090028EFB5 /* CarCell.swift */,
 			);
 			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		D0ED1AD11E6C995800AB5270 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A1A1E65599A0028EFB5 /* CarViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D0ED1AD21E6C996100AB5270 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A181E65599A0028EFB5 /* AppDelegate.swift */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		D0ED1AD31E6C996900AB5270 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A211E65599A0028EFB5 /* LaunchScreen.storyboard */,
+				D05C8A1C1E65599A0028EFB5 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D0ED1AD41E6C998000AB5270 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D05C8A241E65599A0028EFB5 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -13,75 +13,23 @@ import SVProgressHUD
 import MapKit
 import SDWebImage
 class CarViewController: UIViewController {
-    let carViewModel = CarViewModel()
+    var carViewModel : CarViewModel!
     let disposeBag = DisposeBag()
-    let allCars : [Car] = [Car]()
+    
     @IBOutlet weak var displayModeSegment: UISegmentedControl!
     @IBOutlet weak var carMap: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupBindings()
         SVProgressHUD.show(withStatus: "Loading Cars")
-        carViewModel.loadAllCars()
-    }
-    
-   
-    func setupBindings(){
-        
-        //Using ViewModel AllCars as Observable so whenever new items are added in that array this Observable will be called to setup Map and TableView to show the data
-        carViewModel.allCars.asObservable().skip(1)
-            .subscribe(onNext: {[weak self] _ in
-                SVProgressHUD.dismiss()
-                self?.setupCellConfiguration()
-                self?.setupMap()
-            }).addDisposableTo(disposeBag)
-        
-        //Using ViewModel Error String as Observable so whenever there is change in errostring this Observable will be called to show the error message to user
-        carViewModel.errorString.asObservable().skip(1)
-            .subscribe(onNext: { [weak self] error in
-                SVProgressHUD.dismiss()
-                self?.showAlertWithMessage(error)
-            }).addDisposableTo(disposeBag)
-        
-        
-        //Observable for UISegment Control to observe change in the selection of Segments and show appropriate view to user based on selection
-       displayModeSegment.rx
-        .selectedSegmentIndex
-        .asObservable()
-        .subscribe(onNext: {[weak self] value in
-            value == 1 ? (self?.carMap.isHidden = false) : (self?.carMap.isHidden = true)
-        }).addDisposableTo(disposeBag)
-        
-    }
-    
-    //Method to setup custom annotations on the map to show cars.
-    func setupMap(){
-        let annotations = carViewModel.allCars.value.map{ car -> CarAnnotation in
-            let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.make + "•" + car.modelName, subtitle: "Transmission : \( car.transmission.lowercased() == "m" ? "Manual" : "Automatic")", url: car.carImageUrl)
-            return annotation
-        }
-        carMap.delegate = self
-        carMap.addAnnotations(annotations)
-        carMap.showAnnotations(annotations, animated: true)
-    }
-    
-    //Method to setup Tableview using RxCocoa way
-    func setupCellConfiguration(){
-        let allCars = Observable.just(carViewModel.allCars.value)
-        allCars
-            .bindTo(tableView
-                .rx
-                .items(cellIdentifier: CarCell.Identifier, cellType: CarCell.self)){
-                    _,car,cell in
-                    cell.configureWithCar(car: car)
-            }
-            .addDisposableTo(disposeBag)
-        
+        carViewModel = CarViewModel(manager: CarManager())
+        setupBindings()
     }
 }
-extension CarViewController : MKMapViewDelegate{
+//MARK:Extension for MapViewDelegate method to customize the annotation for showing Car on the Map
+extension CarViewController : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if !(annotation is CarAnnotation){
             return nil
@@ -108,6 +56,61 @@ extension CarViewController : MKMapViewDelegate{
         anView?.frame = rect
         
         return anView
+    }
+}
+
+//MARK:General Extension of the CarViewController to seperate logic from actual controller for setting up bindings 
+extension CarViewController {
+    //MARK:Method responsible for setting up bindings for showing data into tableview and map.
+    func setupBindings(){
+        
+        //MARK:Using ViewModel AllCars as Observable so whenever new items are added in that array this Observable will be called to setup Map and TableView to show the data
+        carViewModel.allCars.asObservable().skip(1)
+            .subscribe(onNext: {[weak self] _ in
+                SVProgressHUD.dismiss()
+                self?.setupCellConfiguration()
+                self?.setupMap()
+            }).addDisposableTo(disposeBag)
+        
+        //MARK:Using ViewModel Error String as Observable so whenever there is change in errostring this Observable will be called to show the error message to user
+        carViewModel.errorString.asObservable().skip(1)
+            .subscribe(onNext: { [weak self] error in
+                SVProgressHUD.dismiss()
+                self?.showAlertWithMessage(error)
+            }).addDisposableTo(disposeBag)
+        
+        
+        //MARK:Observable for UISegment Control to observe change in the selection of Segments and show appropriate view to user based on selection
+        displayModeSegment.rx
+            .selectedSegmentIndex
+            .asObservable()
+            .subscribe(onNext: {[weak self] value in
+                value == 1 ? (self?.carMap.isHidden = false) : (self?.carMap.isHidden = true)
+            }).addDisposableTo(disposeBag)
+        
+    }
+    //MARK:Method to setup custom annotations on the map to show cars.
+    func setupMap(){
+        let annotations = carViewModel.allCars.value.map{ car -> CarAnnotation in
+            let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.make + "•" + car.modelName, subtitle: "Transmission : \( car.transmission.lowercased() == "m" ? "Manual" : "Automatic")", url: car.carImageUrl)
+            return annotation
+        }
+        carMap.delegate = self
+        carMap.addAnnotations(annotations)
+        carMap.showAnnotations(annotations, animated: true)
+    }
+    
+    //MARK:Method to setup Tableview using RxCocoa way
+    func setupCellConfiguration(){
+        let allCars = Observable.just(carViewModel.allCars.value)
+        allCars
+            .bindTo(tableView
+                .rx
+                .items(cellIdentifier: CarCell.Identifier, cellType: CarCell.self)){
+                    _,car,cell in
+                    cell.configureWithCar(car: car)
+            }
+            .addDisposableTo(disposeBag)
         
     }
 }

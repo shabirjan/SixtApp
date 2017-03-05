@@ -9,6 +9,11 @@
 import Foundation
 import ObjectMapper
 
+enum CarTransmissionType {
+    static let manual = "Manual"
+    static let automatic = "Automatic"
+}
+
 class Car : Mappable{
     var id  = ""
     var  modelIdentifier  = ""
