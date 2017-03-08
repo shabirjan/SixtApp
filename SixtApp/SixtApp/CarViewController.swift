@@ -28,7 +28,7 @@ class CarViewController: UIViewController {
         setupBindings()
     }
 }
-//MARK:Extension for MapViewDelegate method to customize the annotation for showing Car on the Map
+//MARK: -Extension for MapViewDelegate method to customize the annotation for showing Car on the Map
 extension CarViewController : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if !(annotation is CarAnnotation){
@@ -59,12 +59,12 @@ extension CarViewController : MKMapViewDelegate {
     }
 }
 
-//MARK:General Extension of the CarViewController to seperate logic from actual controller for setting up bindings 
+//MARK: -General Extension of the CarViewController to seperate logic from actual controller for setting up bindings
 extension CarViewController {
-    //MARK:Method responsible for setting up bindings for showing data into tableview and map.
+    //Method responsible for setting up bindings for showing data into tableview and map.
     func setupBindings(){
         
-        //MARK:Using ViewModel AllCars as Observable so whenever new items are added in that array this Observable will be called to setup Map and TableView to show the data
+        //Using ViewModel AllCars as Observable so whenever new items are added in that array this Observable will be called to setup Map and TableView to show the data
         carViewModel.allCars.asObservable().skip(1)
             .subscribe(onNext: {[weak self] _ in
                 SVProgressHUD.dismiss()
@@ -72,7 +72,7 @@ extension CarViewController {
                 self?.setupMap()
             }).addDisposableTo(disposeBag)
         
-        //MARK:Using ViewModel Error String as Observable so whenever there is change in errostring this Observable will be called to show the error message to user
+        //Using ViewModel Error String as Observable so whenever there is change in errostring this Observable will be called to show the error message to user
         carViewModel.errorString.asObservable().skip(1)
             .subscribe(onNext: { [weak self] error in
                 SVProgressHUD.dismiss()
@@ -80,7 +80,7 @@ extension CarViewController {
             }).addDisposableTo(disposeBag)
         
         
-        //MARK:Observable for UISegment Control to observe change in the selection of Segments and show appropriate view to user based on selection
+        //Observable for UISegment Control to observe change in the selection of Segments and show appropriate view to user based on selection
         displayModeSegment.rx
             .selectedSegmentIndex
             .asObservable()
@@ -89,7 +89,7 @@ extension CarViewController {
             }).addDisposableTo(disposeBag)
         
     }
-    //MARK:Method to setup custom annotations on the map to show cars.
+    //MARK: -Method to setup custom annotations on the map to show cars.
     func setupMap(){
         let annotations = carViewModel.allCars.value.map{ car -> CarAnnotation in
             let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.make + "•" + car.modelName, subtitle: "Transmission : \( car.transmission.lowercased() == "m" ? CarTransmissionType.manual : CarTransmissionType.automatic)", url: car.carImageUrl)
@@ -100,7 +100,7 @@ extension CarViewController {
         carMap.showAnnotations(annotations, animated: true)
     }
     
-    //MARK:Method to setup Tableview using RxCocoa way
+    //MARK: -Method to setup Tableview using RxCocoa way
     func setupCellConfiguration(){
         let allCars = Observable.just(carViewModel.allCars.value)
         allCars
