@@ -24,9 +24,4 @@ class CarViewModel {
             self?.allCars.value = cars!
         }
     }
-    
-    
-    func loadAllCars(){
-        
-    }
 }
