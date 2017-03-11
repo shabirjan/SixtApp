@@ -34,12 +34,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RxCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RxSwift.xcscheme</key>
+		<key>Reusable.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,27 +52,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A6D0851BA24DD25864CB23A3A83B9CC</key>
+		<key>0050B312504C4A7F6EAA86EF4D371219</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C78982395BBB47AF413C5FC7D05EC9F</key>
+		<key>1215771836B84E9F9899950098D2FF80</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>421F6BEF92744C4CA9E5F012EC4C5C8F</key>
+		<key>250A6A274CD40615A21615D017CC2872</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>49C6564B2E2D0A1604946BAD65772E21</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6C8F427C5F702730E950E14C9C1C1404</key>
+		<key>52ACA0236F086E72B74F0A090A743D41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,22 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C419A9BCC9AACDC44A26B80764B6B554</key>
+		<key>8F1424ACD198CE3AF2BB9C30584E7937</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CDA0ADC5A323D22E15A9237F7590C187</key>
+		<key>B27F1F7B862582A90168D876BFA178C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4303C7AA27AAC85857BFEE31ABBD859</key>
+		<key>CF9F83025EEE1E89490800018F391A28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EFDB85DF4827734B35E8A46720ACAEE0</key>
+		<key>D55334B06F20900F396146073D69744E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

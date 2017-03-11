@@ -23,6 +23,8 @@
 		D05C8A431E66F1040028EFB5 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A421E66F1040028EFB5 /* CarViewModel.swift */; };
 		D05C8A451E66F3530028EFB5 /* SixtAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A441E66F3530028EFB5 /* SixtAPIManager.swift */; };
 		D05C8A481E671E090028EFB5 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C8A471E671E090028EFB5 /* CarCell.swift */; };
+		D0B4DAE31E742A5400F74208 /* GenericTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4DAE21E742A5400F74208 /* GenericTableViewDataSource.swift */; };
+		D0B4DAE71E742C2400F74208 /* CarsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4DAE61E742C2400F74208 /* CarsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		D05C8A421E66F1040028EFB5 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewModel.swift; path = ViewModel/CarViewModel.swift; sourceTree = "<group>"; };
 		D05C8A441E66F3530028EFB5 /* SixtAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixtAPIManager.swift; sourceTree = "<group>"; };
 		D05C8A471E671E090028EFB5 /* CarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarCell.swift; path = "Custom Cell/CarCell.swift"; sourceTree = "<group>"; };
+		D0B4DAE21E742A5400F74208 /* GenericTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericTableViewDataSource.swift; path = "Data Sources/GenericTableViewDataSource.swift"; sourceTree = "<group>"; };
+		D0B4DAE61E742C2400F74208 /* CarsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarsDataSource.swift; path = "Data Sources/CarsDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		D05C8A171E65599A0028EFB5 /* SixtApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0B4DAE11E742A3500F74208 /* Data Sources */,
 				D0ED1AD31E6C996900AB5270 /* View */,
 				D0ED1AD21E6C996100AB5270 /* App Delegate */,
 				D0ED1AD11E6C995800AB5270 /* ViewControllers */,
@@ -179,6 +184,15 @@
 				D05C8A471E671E090028EFB5 /* CarCell.swift */,
 			);
 			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		D0B4DAE11E742A3500F74208 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D0B4DAE21E742A5400F74208 /* GenericTableViewDataSource.swift */,
+				D0B4DAE61E742C2400F74208 /* CarsDataSource.swift */,
+			);
+			name = "Data Sources";
 			sourceTree = "<group>";
 		};
 		D0ED1AD11E6C995800AB5270 /* ViewControllers */ = {
@@ -343,6 +357,8 @@
 				D05C8A431E66F1040028EFB5 /* CarViewModel.swift in Sources */,
 				D01B6CDC1E6864DB003E906B /* CarAnnotation.swift in Sources */,
 				D02904D31E67FD13009322DF /* UIViewController+Alert.swift in Sources */,
+				D0B4DAE71E742C2400F74208 /* CarsDataSource.swift in Sources */,
+				D0B4DAE31E742A5400F74208 /* GenericTableViewDataSource.swift in Sources */,
 				D05C8A2C1E656D110028EFB5 /* SixtService.swift in Sources */,
 				D05C8A481E671E090028EFB5 /* CarCell.swift in Sources */,
 				D05C8A321E6582CA0028EFB5 /* CarManager.swift in Sources */,

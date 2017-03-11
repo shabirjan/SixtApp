@@ -23,7 +23,4 @@ class CarCell: UITableViewCell {
         lblCleaniness.text   = "Cleanliness  : \(car.innerCleanliness)"
         carImg.download(image: car.carImageUrl)
     }
-    
-
-
 }
