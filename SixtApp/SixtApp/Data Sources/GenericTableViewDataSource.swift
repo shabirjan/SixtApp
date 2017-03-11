@@ -10,7 +10,7 @@ import UIKit
 
 protocol GeneicTableViewDataSource : UITableViewDataSource {
     associatedtype T
-    var items:[T] {get }
+    var items:[T] { get }
     weak var tableView : UITableView? { get }
     weak var delegate : UITableViewDelegate? { get }
     

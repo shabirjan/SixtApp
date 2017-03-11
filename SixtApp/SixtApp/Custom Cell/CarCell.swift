@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class CarCell: UITableViewCell {
+import Reusable
+class CarCell: UITableViewCell, NibReusable {
 
     
     static let Identifier = "CarCell"
@@ -16,6 +16,10 @@ class CarCell: UITableViewCell {
     @IBOutlet weak var lblCleaniness: UILabel!
     @IBOutlet weak var lblTransmission: UILabel!
     @IBOutlet weak var lblCarName: UILabel!
+    
+    static func height() -> CGFloat {
+        return 110
+    }
     
     func configureWithCar(car: Car) {
         lblCarName.text = car.make + "•" + car.modelName
