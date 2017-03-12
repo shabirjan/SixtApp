@@ -70,7 +70,7 @@ extension CarViewController {
     // MARK: -Method to setup custom annotations on the map to show cars.
     func setupMap(){
         let annotations = self.cars.map{ car -> CarAnnotation in
-            let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.make + "•" + car.modelName, subtitle: "Transmission : \( car.transmission.lowercased() == "m" ? CarTransmissionType.manual : CarTransmissionType.automatic)", url: car.carImageUrl)
+            let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.carTitle, subtitle: car.carTransmission, url: car.carImageUrl)
             return annotation
         }
         carMap.delegate = self

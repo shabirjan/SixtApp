@@ -22,8 +22,8 @@ class CarCell: UITableViewCell, NibReusable {
     }
     
     func configureWithCar(car: Car) {
-        lblCarName.text = car.make + "•" + car.modelName
-        lblTransmission.text = "Transmission : \( car.transmission.lowercased() == "m" ? CarTransmissionType.manual : CarTransmissionType.automatic)"
+        lblCarName.text = car.carTitle
+        lblTransmission.text = car.carTransmission
         lblCleaniness.text   = "Cleanliness  : \(car.innerCleanliness)"
         carImg.download(image: car.carImageUrl)
     }
