@@ -18,7 +18,6 @@ final class CarsTableDataSource : NSObject, GeneicTableViewDataSource {
         self.tableView = tableview
         self.delegate = delegate
         super.init()
-        
         tableview.register(cellType: CarCell.self)
         
         self.setupTableView()

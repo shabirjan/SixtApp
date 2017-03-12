@@ -17,6 +17,7 @@ protocol  CarsDelegate {
 
 class CarViewController: UIViewController {
     
+    
     var carManager : CarManager = CarManager()
     var tableDataSource : CarsTableDataSource?
     var tableDelegate : CarTableDelegate?
@@ -33,11 +34,14 @@ class CarViewController: UIViewController {
         fetchCars()
     }
     
+    @IBAction func btnRefreshPressed(_ sender: Any) {
+        fetchCars()
+    }
     @IBAction func segmentValueChanged(_ sender: Any) {
         displayModeSegment.selectedSegmentIndex  == 1 ? (self.carMap.isHidden = false) : (self.carMap.isHidden = true)
     }
 }
-
+//MARK: -Extension for CarViewController for fetching cars and setting up tableview and mapview to show those cars.
 extension CarViewController {
     
     //MARK: -Method to fetch cars from Local File or Network
@@ -78,7 +82,8 @@ extension CarViewController {
 // MARK: -Extension for Implementation of CarDelgate methods
 extension CarViewController : CarsDelegate {
     func didSelectCar(at index: IndexPath) {
-        print("hello")
+        let selectedCar = self.cars[index.row]
+        print(selectedCar.modelName)
     }
 }
 // MARK: -Extension for MapViewDelegate method to customize the annotation for showing Car on the Map

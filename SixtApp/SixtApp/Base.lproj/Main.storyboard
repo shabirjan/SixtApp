@@ -57,7 +57,13 @@
                             <constraint firstAttribute="trailing" secondItem="NJ8-s5-JPC" secondAttribute="trailing" id="ekg-xL-2lq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sixt Cars" id="zes-L5-fpZ"/>
+                    <navigationItem key="navigationItem" title="Sixt Cars" id="zes-L5-fpZ">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="UtS-Br-kfl">
+                            <connections>
+                                <action selector="btnRefreshPressed:" destination="BYZ-38-t0r" id="GYh-ja-xeO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carMap" destination="4BT-rS-KSu" id="CeX-Ve-guW"/>
                         <outlet property="displayModeSegment" destination="6Oa-6Q-wgN" id="oKb-qJ-RbV"/>
