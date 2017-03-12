@@ -23,7 +23,7 @@ class CarCell: UITableViewCell, NibReusable {
     
     func configureWithCar(car: Car) {
         lblCarName.text = car.carTitle
-        lblTransmission.text = car.carTransmission
+        lblTransmission.text = car.transmission
         lblCleaniness.text   = "Cleanliness  : \(car.innerCleanliness)"
         carImg.download(image: car.carImageUrl)
     }
