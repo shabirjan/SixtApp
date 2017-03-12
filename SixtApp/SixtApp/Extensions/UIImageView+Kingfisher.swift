@@ -9,6 +9,8 @@
 import UIKit
 import SDWebImage
 extension UIImageView{
+    
+    //MARK: -Method responsible for downloading and setting image in the imageview
     func download(image url : String) {
         guard let imageURL = URL(string:url) else {
             return

@@ -14,6 +14,8 @@ class CarAnnotation: NSObject, MKAnnotation  {
     var subtitle: String?
     var imageURL: String?
     
+    
+    //MARK: -Init methot to set coordinates, title , subtitle and image url for Annotations (Custom)
     init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String, url : String) {
         self.coordinate = coordinate
         self.title = title

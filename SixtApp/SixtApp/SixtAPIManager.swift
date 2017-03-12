@@ -10,6 +10,9 @@ import Foundation
 import Moya
 class SixtAPIManager {
     let provider = MoyaProvider<SixtService>()
+    
+    
+    //MARK: -Public method that download file from the URL and save the file 
     public func downloadFile(completion:@escaping (_ path:String?, _ error:String?) -> Void){
         provider.request(.downloadAllCars) { (result) in
             switch result{

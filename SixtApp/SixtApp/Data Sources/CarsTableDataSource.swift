@@ -29,12 +29,11 @@ final class CarsTableDataSource : NSObject, GeneicTableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: CarCell.self)
-        let car = self.items[indexPath.row]
-        cell.configureWithCar(car: car)
+        cell.configureWithCar(car: self.items[indexPath.row])
         return cell
     }
 }
-
+//MARK: -TableView Delegate (Custom)
 class CarTableDelegate : NSObject, UITableViewDelegate {
     
     let delegate : CarsDelegate

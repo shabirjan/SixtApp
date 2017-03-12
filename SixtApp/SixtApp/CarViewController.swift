@@ -38,7 +38,7 @@ class CarViewController: UIViewController {
         fetchCars()
     }
     @IBAction func segmentValueChanged(_ sender: Any) {
-        displayModeSegment.selectedSegmentIndex  == 1 ? (self.carMap.isHidden = false) : (self.carMap.isHidden = true)
+        displayModeSegment.selectedSegmentIndex  == 1 ? setupMap() : (self.carMap.isHidden = true)
     }
 }
 //MARK: -Extension for CarViewController for fetching cars and setting up tableview and mapview to show those cars.
@@ -53,22 +53,24 @@ extension CarViewController {
                 return
             }
             SVProgressHUD.dismiss()
-            if let cars = cars {
-                self.setupTableView(with: cars)
-                self.setupMap()
+            guard let cars = cars else {
+                SVProgressHUD.showError(withStatus: "No Cars Found")
+                return
             }
+            self.cars = cars
+            self.setupTableView()
         }
     }
     
     //MARK: - Method to Setup Tableview Genreic DataSource and Delegate setting
-    func setupTableView(with cars: [Car]){
-        self.cars = cars
+    func setupTableView(){
         tableDelegate = CarTableDelegate(self)
-        tableDataSource = CarsTableDataSource(items: cars, tableview: tableView, delegate: tableDelegate!)
+        tableDataSource = CarsTableDataSource(items: self.cars, tableview: tableView, delegate: tableDelegate!)
     }
     
     // MARK: -Method to setup custom annotations on the map to show cars.
     func setupMap(){
+        self.carMap.isHidden = false
         let annotations = self.cars.map{ car -> CarAnnotation in
             let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.carTitle, subtitle: car.transmission, url: car.carImageUrl)
             return annotation
@@ -82,8 +84,7 @@ extension CarViewController {
 // MARK: -Extension for Implementation of CarDelgate methods
 extension CarViewController : CarsDelegate {
     func didSelectCar(at index: IndexPath) {
-        let selectedCar = self.cars[index.row]
-        print(selectedCar.modelName)
+        print(self.cars[index.row].modelName)
     }
 }
 // MARK: -Extension for MapViewDelegate method to customize the annotation for showing Car on the Map
@@ -92,7 +93,7 @@ extension CarViewController : MKMapViewDelegate {
         if !(annotation is CarAnnotation){
             return nil
         }
-        let identifier = "car"
+        let identifier = "carAnnontation"
         var anView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)

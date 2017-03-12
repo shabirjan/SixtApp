@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//MARK: -Protocol for Generic Table Data Source 
 protocol GeneicTableViewDataSource : UITableViewDataSource {
     associatedtype T
     var items:[T] { get }
