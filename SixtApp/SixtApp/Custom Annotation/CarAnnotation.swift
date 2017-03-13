@@ -6,7 +6,6 @@
 //  Copyright © 2017 Shabir Jan. All rights reserved.
 //
 
-import UIKit
 import MapKit
 class CarAnnotation: NSObject, MKAnnotation  {
     var coordinate: CLLocationCoordinate2D

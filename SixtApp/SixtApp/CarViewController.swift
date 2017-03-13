@@ -72,7 +72,7 @@ extension CarViewController {
     func setupMap(){
         self.carMap.isHidden = false
         let annotations = self.cars.map{ car -> CarAnnotation in
-            let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.carTitle, subtitle: car.transmission, url: car.carImageUrl)
+            let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.carTitle, subtitle: car.carTransmision, url: car.carImageUrl)
             return annotation
         }
         carMap.delegate = self

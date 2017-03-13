@@ -9,9 +9,9 @@
 import Foundation
 import ObjectMapper
 
-enum CarTransmissionType {
-    static let manual = "Manual"
-    static let automatic = "Automatic"
+enum CarTransmissionType : String {
+    case manual = "Manual"
+    case automatic = "Automatic"
 }
 
 class Car: Mappable {
@@ -25,11 +25,19 @@ class Car: Mappable {
     var longitude = 0.0
     var innerCleanliness = ""
     var carImageUrl = ""
-    var carTitle = ""
     
-    required init?(map: Map) {
-
+    //MARK: Computed Properties
+    var carTitle : String{
+        return make + "•" + modelName
     }
+    var carTransmision : String {
+        return "Transmission : \(transmission.lowercased() == "m" ? CarTransmissionType.manual : CarTransmissionType.automatic)"
+    }
+    var carCleanliness : String {
+        return "Cleanliness  : \(innerCleanliness)"
+    }
+    
+    required init?(map: Map) { }
     
     //MARK: -Mapper method to map response JSON into model
     func mapping(map: Map) {
@@ -39,15 +47,9 @@ class Car: Mappable {
         make <- map["make"]
         color <- map["color"]
         transmission  <- map["transmission"]
-        
         latitude   <- map["latitude"]
         longitude   <- map["longitude"]
         innerCleanliness  <- map["innerCleanliness"]
         carImageUrl = "https://prod.drive-now-content.com/fileadmin/user_upload_global/assets/cars/\(modelIdentifier)/\(color)/2x/car.png"
-        
-        carTitle = make + "•" + modelName
-        transmission = "Transmission : \(transmission.lowercased() == "m" ? CarTransmissionType.manual : CarTransmissionType.automatic)"
-        innerCleanliness = "Cleanliness  : \(innerCleanliness)"
-
     }
 }

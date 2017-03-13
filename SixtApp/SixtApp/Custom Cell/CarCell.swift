@@ -30,8 +30,8 @@ class CarCell: UITableViewCell, NibReusable {
     //MARK: -Method responsible for setting values in the Cell 
     func configureWithCar(car: Car) {
         lblCarName.text = car.carTitle
-        lblTransmission.text = car.transmission
-        lblCleaniness.text   = car.innerCleanliness
+        lblTransmission.text = car.carTransmision
+        lblCleaniness.text   = car.carCleanliness
         carImg.download(image: car.carImageUrl)
     }
 }
