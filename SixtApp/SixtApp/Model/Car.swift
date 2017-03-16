@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-enum CarTransmissionType : String {
+enum CarTransmissionType: String {
     case manual = "Manual"
     case automatic = "Automatic"
 }
@@ -25,21 +25,21 @@ class Car: Mappable {
     var longitude = 0.0
     var innerCleanliness = ""
     var carImageUrl = ""
-    
-    //MARK: Computed Properties
-    var carTitle : String{
+
+    // MARK: Computed Properties
+    var carTitle: String {
         return make + "•" + modelName
     }
-    var carTransmision : String {
+    var carTransmision: String {
         return "Transmission : \(transmission.lowercased() == "m" ? CarTransmissionType.manual : CarTransmissionType.automatic)"
     }
-    var carCleanliness : String {
+    var carCleanliness: String {
         return "Cleanliness  : \(innerCleanliness)"
     }
-    
+
     required init?(map: Map) { }
-    
-    //MARK: -Mapper method to map response JSON into model
+
+   // MARK: - Mapper method to map response JSON into model
     func mapping(map: Map) {
         id <- map["id"]
         modelIdentifier <- map ["modelIdentifier"]
