@@ -19,11 +19,11 @@ class CarManager {
     private func getCars(completion:@escaping (_ cars:[Car]?, _ error:String?) -> Void) {
         let apiManager = SixtAPIManager()
         apiManager.downloadFile {[weak self] (filePath, error) in
-            guard  error == nil else {
+            guard  error == "" else {
                 completion([], error)
                 return
             }
-            completion(self?.processJsonFile(filePath!), nil)
+            completion(self?.processJsonFile(filePath), nil)
         }
     }
     
