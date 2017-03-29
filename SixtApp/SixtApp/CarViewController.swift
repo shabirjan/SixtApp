@@ -38,7 +38,7 @@ class CarViewController: UIViewController {
         fetchCars()
     }
     @IBAction func segmentValueChanged(_ sender: Any) {
-        displayModeSegment.selectedSegmentIndex  == 1 ? setupMap() : (self.carMap.isHidden = true)
+        displayModeSegment.selectedSegmentIndex  == 1 ? setupMap() : (carMap.isHidden = true)
     }
 }
 //MARK: -Extension for CarViewController for fetching cars and setting up tableview and mapview to show those cars.
@@ -47,7 +47,7 @@ extension CarViewController {
     //MARK: -Method to fetch cars from Local File or Network
     func fetchCars(){
         SVProgressHUD.show(withStatus: "Loading Cars")
-        carManager.fetchAllCars { (cars, error) in
+        carManager.fetchAllCars {[weak self] (cars, error) in
             guard error == nil else {
                 SVProgressHUD.showError(withStatus: error)
                 return
@@ -57,8 +57,8 @@ extension CarViewController {
                 SVProgressHUD.showError(withStatus: "No Cars Found")
                 return
             }
-            self.cars = cars
-            self.setupTableView()
+            self?.cars = cars
+            self?.setupTableView()
         }
     }
     
@@ -70,7 +70,7 @@ extension CarViewController {
     
     // MARK: -Method to setup custom annotations on the map to show cars.
     func setupMap(){
-        self.carMap.isHidden = false
+        carMap.isHidden = false
         let annotations = self.cars.map{ car -> CarAnnotation in
             let annotation = CarAnnotation(coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude), title: car.carTitle, subtitle: car.carTransmision, url: car.carImageUrl)
             return annotation
